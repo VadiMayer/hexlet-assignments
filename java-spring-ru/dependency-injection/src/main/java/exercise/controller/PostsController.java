@@ -43,6 +43,7 @@ public class PostsController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public Post create(@RequestBody Post post) {
         return postRepository.save(post);
     }
